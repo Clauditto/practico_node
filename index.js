@@ -21,4 +21,4 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 app.get("/", function (req, res) {
     res.render("home");
 });
-app.listen(PORT, () => console.log(`Inicindo en el puerto ${PORT}`));
+app.listen(PORT, () => console.log(`Iniciando en el puerto ${PORT}`));
