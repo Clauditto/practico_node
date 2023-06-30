@@ -1,2 +1,18 @@
-<h1>Listado de Productos</h1>
-{{> Card }}
+{{#if usuario}}
+    <h1>
+        Bienvenid@:{{usuario}}
+    </h1>
+
+
+    <div class="row">
+        {{#each productos}}
+            <div class="col-12 col-md-4">
+                {{> Card tarjeta=this}}
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+{{#unless usuario}}
+    <h1>Inicie sesión</h1>
+{{/unless}}
