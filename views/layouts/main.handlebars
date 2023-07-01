@@ -14,13 +14,27 @@
     <script>
         $(document).ready(function () { 
             console.log("ready!");
+
+
+            let cont = 0;
+
             let botones = document.getElementsByClassName('btn');
             for(let boton of botones){
                 boton.addEventListener('click', (event) => {
-                    alert(boton.id);
+                    let fila = document.getElementById("fila");
+                    cont++;
+                    fila.innerHTML += `<tr><th scope="row">${cont}</th><td>${boton.id}</td><td><img src='./img/${boton.dataset.file}' width='50' height='50' ></td></tr>`;
                 });
             };
         });
     </script>
 </body>
 </html>
+
+
+{{!-- <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr> --}}

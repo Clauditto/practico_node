@@ -1,18 +1,25 @@
-{{#if usuario}}
-    <h1>
-        Bienvenid@ {{usuario}} al mercado web, seleccione sus productos
-    </h1>
+<div class="row">
+    <div class="col-6">
+        {{#if usuario}}
+            <h1>
+                Bienvenid@ {{usuario}} al mercado web, seleccione sus productos
+            </h1>
 
 
-    <div class="row">
-        {{#each productos}}
-            <div class="col-12 col-md-4">
-                {{> Card tarjeta=this}}
+            <div class="row">
+                {{#each productos}}
+                    <div class="col-12 col-md-4">
+                        {{> Card tarjeta=this}}
+                    </div>
+                {{/each}}
             </div>
-        {{/each}}
-    </div>
-{{/if}}
+        {{/if}}
 
-{{#unless usuario}}
-    <h1>Inicie sesión</h1>
-{{/unless}}
+        {{#unless usuario}}
+            <h1>Inicie sesión</h1>
+        {{/unless}}
+    </div>
+    <div class="col-6">
+        {{> Carro }}
+    </div>
+</div>
