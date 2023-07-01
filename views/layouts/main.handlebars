@@ -13,7 +13,13 @@
     <!--Manejo botón-->
     <script>
         $(document).ready(function () { 
-            console.log("ready!"); 
+            console.log("ready!");
+            let botones = document.getElementsByClassName('btn');
+            for(let boton of botones){
+                boton.addEventListener('click', (event) => {
+                    alert(boton.id);
+                });
+            };
         });
     </script>
 </body>
